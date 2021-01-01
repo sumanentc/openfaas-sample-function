@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  python-hello-world:
+    lang: python3
+    handler: ./python-hello-world
+    image: sumand/python-hello-world:latest
+
