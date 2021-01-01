@@ -5,6 +5,6 @@ provider:
 functions:
   python-hello-world:
     lang: python3
-    handler: ./python-hello-world
+    handler: ./python3-sample/python-hello-world
     image: sumand/python-hello-world:latest
 

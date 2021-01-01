@@ -1,13 +1,11 @@
 from jinja2 import Template
+import json
 
 def handle(req):
-    """handle a request to the function
-    Args:
-        req (str): request body
-    """
+    input = json.loads(req)
 
     t = Template("Hello {{name}}")
-    res = t.render(name="Jane")
+    res = t.render(name=input["name"])
     return res
 
 
