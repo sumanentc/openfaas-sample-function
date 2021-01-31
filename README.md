@@ -16,3 +16,16 @@ To invoke the function we need to run the below commands
 curl http://127.0.0.1:8080/function/py-hello-world --data-binary '{ "name": "Suman", "greeting": "Hello" }'
 
 ```
+
+- dockerfile-sample is a sample function written using [dockerfile template](https://github.com/openfaas/templates/tree/master/template/dockerfile)
+
+```
+export OPENFAAS_PREFIX=sumand
+faas-cli up -f dockerfile-sample/sample-flask-service.yml
+
+```
+
+```
+curl http://127.0.0.1:8080/function/sample-flask-service/api/items
+
+```
